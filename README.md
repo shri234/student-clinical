@@ -1,1 +1,1 @@
-# student-clinical
+# student

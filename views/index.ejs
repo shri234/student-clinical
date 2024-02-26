@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Students Department Selection</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <h1>Student Registration Form</h1>
+    <form action="/student/create" method="POST" class="ui form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="Name" required/><br /><br />
+      <label for="rollno">Roll No:</label>
+      <input type="text" id="rollno" name="Rollno" required/><br /><br />
+      <label for="dept">Department:</label>
+      <select id="dept" name="Elective" required>
+        <option value="NCD Clinic">NCD Clinic</option>
+        <option value="ICMU - Management Of Medical Emergencies">
+            ICMU - Management Of Medical Emergencies
+        </option>
+        <option value="Essential New Born Care">
+         Essential New Born Care
+        </option>
+        <option value="Common fungal skin infections">
+          Common fungal skin infections
+        </option>
+        <option value="Anthropometry, growth chart plotting">Anthropometry, growth chart plotting</option>
+        <option value="Common Bacterial and Viral skin infections">
+          Common Bacterial and Viral skin infections
+        </option>
+        <option value="Deaddiction">
+          Deaddiction
+        </option>
+        <option value="General Psychiatry">General Psychiatry</option>
+        <option value="Wound Management - Contaminated and non Contaminated Wounds">
+         Wound Management - Contaminated and non Contaminated Wounds
+        </option>
+        <option value="Long Bone fracture Management -immobilization and splinting">
+          Long Bone fracture Management -immobilization and splinting
+        </option>
+        <option value="Spine fracture Managemnt">
+          Spine fracture Managemnt
+        </option>
+        <option value="Interpretion of Chest X rays">Interpretion of Chest X rays</option>
+        <option value="Anaesthetic Management of High risk cases">
+          Anaesthetic Management of High risk cases
+        </option>
+        <option value="Cathlab">
+          Cathlab
+        </option>
+        <option value="Obstructive airway disease">
+          Obstructive airway disease
+        </option>
+        <option value="Face and Neck Trauma">Face and Neck Trauma</option>
+        <option value="Maternal and Child Health">Maternal and Child Health</option>
+<option value="High risk Obstetrics">High risk Obstetrics</option>
+<option value="Gynec oncology">Gynec oncology</option>
+<option value="Code-blue Emergency Triage Management">Code-blue Emergency Triage Management</option>
+<option value="Adult and Pediatric CPR">Adult and Pediatric CPR</option>
+<option value="Toxicology Managment of poisoning and bites">Toxicology Managment of poisoning and bites</option>
+<option value="Operation theatre protocol - anesthetic fitness, patient preparation, Informed Consent, preoperative instructions etc.">Operation theatre protocol - anesthetic fitness, patient preparation, Informed Consent, preoperative instructions etc.</option>
+<option value="Multimodality Imaging Techniques (Xray, Contrast, ultrasonogram, CT Scan, MRI Scan)">Multimodality Imaging Techniques (Xray, Contrast, ultrasonogram, CT Scan, MRI Scan)</option>
+<option value="CKD - Options of renal replacement theory">CKD - Options of renal replacement theory</option>
+<option value="ICU-CPR , Intubation, central venus cannulation, ventilation">ICU-CPR , Intubation, central venus cannulation, ventilation</option>
+        </select
+      ><br /><br />
+      <div class="col d-flex justify-content-end mt-4">
+        <button class="btn text-white bg-primary-custom rounded-3">
+          Submit
+        </button>
+      </div>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Department</th>
+          <th>Available Seats</th>
+        </tr>
+      </thead>
+      <%electives.forEach((blog)=> {%>
+      <tbody id="availableSeatsTableBody">
+        <tr data-dept="NCD">
+          <td><%=blog.Elective%></td>
+          <td><%=blog.Seats%></td>
+        </tr>
+      </tbody>
+      <% })%>
+    </table>
+  </body>
+</html>
